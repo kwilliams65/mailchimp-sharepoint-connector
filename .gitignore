@@ -1,0 +1,17 @@
+# Dependency directories
+node_modules/
+
+# dotenv environment variables file
+*.env
+
+# Build Output
+build/
+
+# IDE - VSCode
+.vscode/**/*
+!.vscode/launch.json
+!.vscode/tasks.json
+
+# Code Coverage
+.nyc_output/
+coverage/

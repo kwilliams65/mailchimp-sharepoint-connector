@@ -1,0 +1,21 @@
+{
+  "extends": "./node_modules/gts/tsconfig-google.json",
+  "compilerOptions": {
+    "allowJs": true,
+    "declaration": false,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "noImplicitAny": true,
+    "noLib": false,
+    "noUnusedLocals": true,
+    "outDir": "build",
+    "removeComments": true,
+    "target": "es2017"
+  },
+  "include": [
+    "./src/**/*",
+  ],
+  "exclude": [
+    "test/**/*.spec.ts"
+  ]
+}
