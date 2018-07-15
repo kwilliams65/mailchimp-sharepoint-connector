@@ -7,11 +7,11 @@
     "check": "gts check",
     "clean": "gts clean",
     "compile": "tsc -p .",
-    "fix": "gts fix",
+    "fix": "tslint --fix",
     "lint": "tslint --project .",
     "prepare": "npm run compile",
     "pretest": "npm run compile",
-    "posttest": "npm run check",
+    "posttest": "npm run lint",
     "start": "node dist/index.js",
     "test": "nyc mocha"
   },
