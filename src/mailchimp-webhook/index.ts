@@ -32,10 +32,14 @@ function authenticateRequest(event: APIGatewayEvent, context: Context, callback:
 }
 
 function queueMessage(event: APIGatewayEvent): Promise<string> {
-    const params = {
-        MessageBody: event.body,
-        QueueUrl: process.env.MAILCHIMP_QUEUE_URL
-    };
+    if (event.body) {
+        const params = {
+            MessageBody: event.body,
+            QueueUrl: process.env.MAILCHIMP_QUEUE_URL
+        };
 
-    return sqs.sendMessage(params).promise();
+        return sqs.sendMessage(params).promise();
+    } else {
+        return Promise.resolve('Verified');
+    }
 }

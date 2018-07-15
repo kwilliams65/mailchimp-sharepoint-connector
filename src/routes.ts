@@ -7,6 +7,11 @@ export const routes: Route[] = [
     method: 'post',
     handler: mailchimpWebhookHandler
   },
+  {
+    route: '/mailchimp-webhook',
+    method: 'get',
+    handler: mailchimpWebhookHandler
+  },
 ];
 
 export interface Route {
